@@ -1,0 +1,166 @@
+:root {
+  --cor-primaria: #60519b;
+  --cor-secundaria: #1c202c;
+  --cor-terciaria: #31323e;
+  --cor-quaternaria: #BFC0D1;
+  --cor-fundo: #1c202c;
+  --cor-clara: #BFC0D1;
+  --cor-texto: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+header h1 {
+  color: var(--cor-texto);
+  z-index: 999;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  bottom: -15px;
+  font-size: 3.5rem;
+}
+
+container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container .video-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+canvas {
+  position: relative;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  margin-top: 35px;
+  width: 90vw;
+  height: 90vh;
+  max-width: 850px;
+  max-height: 550px;
+  border-radius: 9px;
+  border: 3px solid var(--cor-clara);
+  z-index: 1;
+  background: #000;
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: var(--cor-terciaria);
+  color: var(--cor-clara);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* CARDS */
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  background: var(--cor-secundaria);
+  border: 2px solid var(--cor-terciaria);
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: var(--cor-primaria);
+  background: var(--cor-terciaria);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* BOTÃO FECHAR */
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* SEÇÃO */
+
+section {
+  text-align: center;
+  background: var(--cor-terciaria);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--cor-clara);
+}
+
+section button {
+  background: var(--cor-secundaria);
+  color: var(--cor-clara);
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+section button:hover {
+  transform: scale(1.05);
+  background: var(--cor-primaria);
+}
+
+/* BOTÕES DE DIFICULDADE */
+
+.difficulty-buttons img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+}
